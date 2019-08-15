@@ -1,8 +1,0 @@
-<h2>Book Details</h2>
-<ul [ngClass]="'home'">
-    <!-- {{books | json}} -->
-    <li *ngFor="let book of books">
-        Id: {{book.id}}, Name : {{book.name}} |
-        <a [routerLink]="['/book-detail', book.id]">Show Detail</a>
-    </li>
-</ul>
