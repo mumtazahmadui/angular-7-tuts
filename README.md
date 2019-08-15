@@ -18,7 +18,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## https://www.concretepage.com/angular-2/angular-resolve-guard-example
+## ref url
+https://www.concretepage.com/angular-2/angular-resolve-guard-example
 
 ## Running end-to-end tests
 
