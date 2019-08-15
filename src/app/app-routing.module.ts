@@ -1,17 +1,33 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { BookDetailComponent } from './book-detail/book-detail.component';
-
+import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent }  from './page-not-found.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'book-detail/:id', component: BookDetailComponent },
-  { path: '', redirectTo:'/home', pathMatch: 'full' }
+	{
+	   path: '',
+	   redirectTo: '/country/countryList',
+	   pathMatch: 'full'
+	},	
+	{
+	   path: 'country',
+       loadChildren: './country/country.module#CountryModule'
+	},
+	{
+	   path: 'person',
+       loadChildren: './person/person.module#PersonModule'
+	},
+    {
+	   path: '**',
+	   component: PageNotFoundComponent 
+	}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [ 
+      RouterModule.forRoot(routes) 
+  ],
+  exports: [ 
+      RouterModule 
+  ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { } 

@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+		<nav ngClass = "parent-menu">
+			<ul>
+			<li><a routerLink="/country/countryList" routerLinkActive="active">Country</a></li>
+			<li><a routerLink="/person/personList" routerLinkActive="active">Person</a></li>
+			</ul> 
+		</nav>  
+		
+		<router-outlet></router-outlet>	
+  `
 })
-export class AppComponent {
-  title = 'rout';
+export class AppComponent { 
 }
+    

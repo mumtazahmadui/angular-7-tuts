@@ -1,22 +1,20 @@
+import { NgModule }   from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { BookDetailComponent } from './book-detail/book-detail.component';
+import { AppComponent }  from './app.component';
+import { PageNotFoundComponent }  from './page-not-found.component';
+import { AppRoutingModule }  from './app-routing.module';
 
 @NgModule({
+  imports: [     
+    BrowserModule,
+		AppRoutingModule,
+  ],
   declarations: [
     AppComponent,
-    HomeComponent,
-    BookDetailComponent
+    PageNotFoundComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+  providers: [ 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
