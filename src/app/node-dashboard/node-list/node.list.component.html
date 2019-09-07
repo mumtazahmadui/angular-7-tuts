@@ -1,0 +1,19 @@
+<h3>Virtual Compute Nodes Summary </h3>
+<div *ngFor="let node of nodes | async">
+  <p>{{node.vm_name}} | {{node.id}}
+    <a [routerLink]="[node.id]" routerLinkActive="active">Detail</a>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+<!-- <h3>Virtual Compute Nodes Summary </h3>
+<div *ngFor="let person of persons | async">
+  <p>{{person.name}} |
+    <a [routerLink]="[person.personId]" routerLinkActive="active">Detail</a>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div> -->
+
+
